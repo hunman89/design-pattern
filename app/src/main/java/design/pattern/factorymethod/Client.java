@@ -3,11 +3,12 @@ package design.pattern.factorymethod;
 public class Client {
     public static void main(String[] args) {
         Client client = new Client();
+        client.print(new WhiteShipFactory(), "whiteship", "keesun@mail.com");
+        client.print(new BlackshipFactory(), "blackship", "keesun@mail.com");
 
-        Ship whiteship = new WhiteShipFactory().orderShip("Whiteship", "hunman@email.com");
-        System.out.println(whiteship);
+    }
 
-        Ship blackship = new BlackshipFactory().orderShip("Blackship", "hunman@mail.com");
-        System.out.println(blackship);
+    private void print(ShipFactory shipFactory, String name, String email) {
+        System.out.println(shipFactory.orderShip(name, email));
     }
 }

@@ -9,13 +9,13 @@ public interface ShipFactory {
         return ship;
     }
 
-    static void sendEmailTo(String email, Ship ship) {
+    private void sendEmailTo(String email, Ship ship) {
         System.out.println(ship.getName() + " 다 만들었습니다.");
     };
 
     Ship createShip();
 
-    static void validate(String name, String mail) {
+    private void validate(String name, String mail) {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("배 이름을 지어주세요.");
         }
@@ -24,7 +24,7 @@ public interface ShipFactory {
         }
     }
 
-    static void prepareFor(String name) {
+    private void prepareFor(String name) {
         System.out.println(name + " 만들 준비 중");
     }
 }
