@@ -1,9 +1,16 @@
 package design.pattern.factorymethod;
 
+import org.checkerframework.checker.units.qual.A;
+
+import design.pattern.abstractfactory.Anchor;
+import design.pattern.abstractfactory.Wheel;
+
 public class Ship {
     private String name;
     private String color;
     private String logo;
+    private Wheel wheel;
+    private Anchor anchor;
 
     public String getName() {
         return name;
@@ -33,6 +40,22 @@ public class Ship {
     public String toString() {
         // TODO Auto-generated method stub
         return "Ship [name='" + name + "', color='" + color + "', logo='" + logo + "']";
+    }
+
+    public Anchor getAnchor() {
+        return anchor;
+    }
+
+    public void setAnchor(Anchor anchor) {
+        this.anchor = anchor;
+    }
+
+    public Wheel getWheel() {
+        return wheel;
+    }
+
+    public void setWheel(Wheel wheel) {
+        this.wheel = wheel;
     }
 
 }
